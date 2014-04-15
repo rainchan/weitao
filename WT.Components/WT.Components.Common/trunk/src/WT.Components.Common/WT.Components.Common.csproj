@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6D8E71E-87AC-46F0-945A-BA4D27851B32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WT.Components.Common</RootNamespace>
+    <AssemblyName>WT.Components.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\WT.Components.Common.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\WT.Components.Common.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=1.3.0.4309, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.3.0.4309, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="org.phprpc.client, Version=3.0.2.21100, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\org.phprpc.client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AESRijndael.cs" />
+    <Compile Include="Comparer\EqualsComparer.cs" />
+    <Compile Include="Config\SettingSection.cs" />
+    <Compile Include="Const\GlobalCacheKey.cs" />
+    <Compile Include="Const\GlobalStringKey.cs" />
+    <Compile Include="Exceptions\ResultException.cs" />
+    <Compile Include="Extention\ConvertExtention.cs" />
+    <Compile Include="Extention\UrlExtensions.cs" />
+    <Compile Include="FilterWord\FilterWordManager.cs" />
+    <Compile Include="FilterWord\Node.cs" />
+    <Compile Include="Helpers\CacheHelper.cs" />
+    <Compile Include="Helpers\EncryptionHelper.cs" />
+    <Compile Include="Helpers\FileOperationHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\MailHelper.cs" />
+    <Compile Include="Helpers\PhpRpcHelper.cs" />
+    <Compile Include="Helpers\PinyinHelper.cs" />
+    <Compile Include="Helpers\PyCode.cs" />
+    <Compile Include="Helpers\PyHash.cs" />
+    <Compile Include="Helpers\XmlNodeHelper.cs" />
+    <Compile Include="Log\ILogWriter.cs" />
+    <Compile Include="Log\LogWriter.cs" />
+    <Compile Include="Log\MongoDBAppender.cs" />
+    <Compile Include="Log\Mongo\BackwardCompatibility.cs" />
+    <Compile Include="Models\PlatFormType.cs" />
+    <Compile Include="Helpers\PathHelper.cs" />
+    <Compile Include="Models\ResultEntity.cs" />
+    <Compile Include="Models\ResultModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\CheckCodeUtil.cs" />
+    <Compile Include="Utility\ConfigUtil.cs" />
+    <Compile Include="Utility\CryptUtil.cs" />
+    <Compile Include="Utility\DateTimeUtil.cs" />
+    <Compile Include="Utility\JsonUtil.cs" />
+    <Compile Include="Utility\LogUtil.cs" />
+    <Compile Include="Utility\MailUtil.cs" />
+    <Compile Include="Utility\MD5Encrypt.cs" />
+    <Compile Include="Utility\MobileUtil.cs" />
+    <Compile Include="Utility\PHPSerializer.cs" />
+    <Compile Include="Utility\RandomUtil.cs" />
+    <Compile Include="Utility\StringUtil.cs" />
+    <Compile Include="Utility\WebUtil.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
