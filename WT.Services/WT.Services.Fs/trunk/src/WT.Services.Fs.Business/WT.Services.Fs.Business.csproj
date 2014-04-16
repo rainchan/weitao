@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA0588D4-1525-4823-9F5F-82E908F020C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WT.Services.Fs.Business</RootNamespace>
+    <AssemblyName>WT.Services.Fs.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WT.Components.Common">
+      <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\Release\Components\1.0.0\WT.Components.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="WT.Components.Database">
+      <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\Release\Components\1.0.0\WT.Components.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="WT.Components.FastDfs">
+      <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\Release\Components\1.0.0\WT.Components.FastDfs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="CommonFilesService.cs" />
+    <Compile Include="Interfaces\IAsyncPictureFileService.cs" />
+    <Compile Include="Interfaces\ICommonFilesService.cs" />
+    <Compile Include="Interfaces\IPictureFileService.cs" />
+    <Compile Include="PictureAsyncFileService.cs" />
+    <Compile Include="PictureFileService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScalePictureOperation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WT.Services.Fs.Models\WT.Services.Fs.Models.csproj">
+      <Project>{a98443b7-b346-4103-8ba9-71b4d6d2d075}</Project>
+      <Name>WT.Services.Fs.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WT.Services.Fs.Repository\WT.Services.Fs.Repository.csproj">
+      <Project>{f7915e32-2fdf-4608-ac4f-c00b5fd9c9f5}</Project>
+      <Name>WT.Services.Fs.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

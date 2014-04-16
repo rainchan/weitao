@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7915E32-2FDF-4608-AC4F-C00B5FD9C9F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WT.Services.Fs.Repository</RootNamespace>
+    <AssemblyName>WT.Services.Fs.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite">
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.MySql">
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\ServiceStack.OrmLite.MySql.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WT.Components.Common">
+      <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\Release\Components\1.0.0\WT.Components.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="WT.Components.Database">
+      <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\Release\Components\1.0.0\WT.Components.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="WT.Components.Redis">
+      <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\Release\Components\1.0.0\WT.Components.Redis.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\FilePicDA.cs" />
+    <Compile Include="Database\FilesDA.cs" />
+    <Compile Include="Database\FSDbFactory.cs" />
+    <Compile Include="Database\FSDbInstance.cs" />
+    <Compile Include="Database\IFilePicDA.cs" />
+    <Compile Include="Database\IFilesDA.cs" />
+    <Compile Include="Entity\FileEntity.cs" />
+    <Compile Include="Entity\ScalePictureFileEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redis\CommonFileKeys.cs" />
+    <Compile Include="Redis\CommonFileRA.cs" />
+    <Compile Include="Redis\CommonFileRedisFactory.cs" />
+    <Compile Include="Redis\CommonFileRedisInstance.cs" />
+    <Compile Include="Redis\ICommonFileRedis.cs" />
+    <Compile Include="Redis\IScalePicFileRedis.cs" />
+    <Compile Include="Redis\ScalePicFileKeys.cs" />
+    <Compile Include="Redis\ScalePicFileRA.cs" />
+    <Compile Include="Redis\ScalePicFileRedisFactory.cs" />
+    <Compile Include="Redis\ScalePicFileRedisInstance.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
