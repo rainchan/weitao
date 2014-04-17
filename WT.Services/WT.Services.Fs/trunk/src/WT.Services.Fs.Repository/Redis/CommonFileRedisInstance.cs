@@ -19,7 +19,8 @@ namespace WT.Services.Fs.Repository.Redis
             RedisPort = ConfigUtil.GetAppSetting("redis_port").ToInt32();
             RedisPassword = ConfigUtil.GetAppSetting("redis_password");
 
-            pooled = new PooledRedisClientManager(string.Format("{0}@{1}:{2}", RedisPassword, RedisHost, RedisPort));
+            string connectstr = string.Format("{0}@{1}:{2}", RedisPassword, RedisHost, RedisPort);
+            pooled = new PooledRedisClientManager(0, connectstr);
             pooled.ConnectTimeout = 5000;
             pooled.PoolTimeout = 5000;
             pooled.SocketSendTimeout = 5000;
@@ -34,7 +35,8 @@ namespace WT.Services.Fs.Repository.Redis
             RedisPort = ConfigUtil.GetAppSetting(portKey).ToInt32();
             RedisPassword = ConfigUtil.GetAppSetting(passwordKey);
 
-            pooled = new PooledRedisClientManager(string.Format("{0}@{1}:{2}", RedisPassword, RedisHost, RedisPort));
+            string connectstr = string.Format("{0}@{1}:{2}", RedisPassword, RedisHost, RedisPort);
+            pooled = new PooledRedisClientManager(0, connectstr);
             pooled.ConnectTimeout = 5000;
             pooled.PoolTimeout = 5000;
             pooled.SocketSendTimeout = 5000;

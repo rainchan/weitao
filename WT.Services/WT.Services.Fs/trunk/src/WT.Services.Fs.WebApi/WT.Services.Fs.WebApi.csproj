@@ -44,6 +44,9 @@
     <Reference Include="log4net">
       <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\ThirdPartyLibs\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\ThirdPartyLibs\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="ServiceStack">
       <HintPath>..\..\..\..\..\..\..\weitao\Code\trunk\ThirdPartyLibs\ServiceStack.dll</HintPath>
     </Reference>
