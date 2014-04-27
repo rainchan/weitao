@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WT.CMS.Business", "WT.CMS.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WT.CMS.Repository", "WT.CMS.Repository\WT.CMS.Repository.csproj", "{D548CAB7-E0BA-4287-AB2E-7840131CF7F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WT.CMS.WebSite", "WT.CMS.WebSite\WT.CMS.WebSite.csproj", "{0B19FF19-073A-4CF9-8917-50EDA3BDE94B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{D548CAB7-E0BA-4287-AB2E-7840131CF7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D548CAB7-E0BA-4287-AB2E-7840131CF7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D548CAB7-E0BA-4287-AB2E-7840131CF7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B19FF19-073A-4CF9-8917-50EDA3BDE94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B19FF19-073A-4CF9-8917-50EDA3BDE94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B19FF19-073A-4CF9-8917-50EDA3BDE94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B19FF19-073A-4CF9-8917-50EDA3BDE94B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

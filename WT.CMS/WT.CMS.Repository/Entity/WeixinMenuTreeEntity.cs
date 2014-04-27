@@ -8,10 +8,11 @@ using ServiceStack.DataAnnotations;
 namespace WT.CMS.Repository.Entity
 {
     [Alias("weixin_menu_tree")]
-    public class WeixinMenuTreeEntity
+    public class WeixinMenuTreeEntity:BaseEntity
     {
         public int parent_id { get; set; }
-        public string name { get; set; }
+        public string menu_name { get; set; }
         public string command { get; set; }
+        public int status { get; set; }
     }
 }

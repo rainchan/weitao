@@ -39,7 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contents\IWeixinMenuTreeSvr.cs" />
+    <Compile Include="Contents\WeixinMenuTreeSvr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WT.CMS.Models\WT.CMS.Models.csproj">
+      <Project>{0cef73e8-2a73-4b0a-be48-99436bf3b993}</Project>
+      <Name>WT.CMS.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WT.CMS.Repository\WT.CMS.Repository.csproj">
+      <Project>{d548cab7-e0ba-4287-ab2e-7840131cf7f1}</Project>
+      <Name>WT.CMS.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

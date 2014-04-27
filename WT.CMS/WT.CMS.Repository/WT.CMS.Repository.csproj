@@ -30,8 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\ThirdPartyLibs\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\..\BasicProject\Infrastructure_V1.1\ThirdPartyLibs\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\ThirdPartyLibs\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack">
       <HintPath>..\..\ThirdPartyLibs\ServiceStack.dll</HintPath>
@@ -61,11 +64,18 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WT.Components.Common">
+      <HintPath>..\..\Release\Components\1.0.0\WT.Components.Common.dll</HintPath>
+    </Reference>
     <Reference Include="WT.Components.Database">
       <HintPath>..\..\Release\Components\1.0.0\WT.Components.Database.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\IWeixinMenuTreeDA.cs" />
+    <Compile Include="Database\WeitaoDbFactory.cs" />
+    <Compile Include="Database\WeitaoDbInstance.cs" />
+    <Compile Include="Database\WeixinMenuTreeDA.cs" />
     <Compile Include="Entity\BaseEntity.cs" />
     <Compile Include="Entity\CouponKeysEntity.cs" />
     <Compile Include="Entity\GrouponEntity.cs" />
@@ -79,7 +89,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database\" />
     <Folder Include="Redis\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
